@@ -1,0 +1,15 @@
+<ion-popover-view>
+    <ion-header-bar class="bar-emaitr-purple">
+      <h1 class="title">Select Location</h1>
+    </ion-header-bar>
+    <ion-content>
+      <label id="location-select-label">
+        <select name="mySelect" id="location-select" ng-change="getListings(1)"
+                ng-options="location.name for location in locations track by location.id"
+                ng-model="search.location">
+        </select>
+      </label>
+
+
+    </ion-content>
+  </ion-popover-view>

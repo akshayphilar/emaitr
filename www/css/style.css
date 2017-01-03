@@ -1,0 +1,548 @@
+/* Empty. Add your own CSS if you like */
+
+@font-face {
+  font-family: MyriadPro;
+  src: url(../font/MyriadPro-Regular.otf);
+}
+
+
+.emaitr_bg {
+  background: url(../img/bg.jpg) no-repeat center;
+  background-size: cover;
+  margin-top: 40px;
+}
+
+.emaitr_bg_plain {
+  background: #e26900;
+}
+
+.user-header-img {
+  max-width: 100%;
+  margin-top: 20%;
+  padding: 5%;
+}
+
+.user-form {
+  padding: 5%;
+}
+
+.user-form input {
+  width: 100%;
+  margin: 3% auto 3% auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  height:50px;
+  color: white;
+  padding: 0 12px 0 12px;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+.user-form a {
+  margin: 5% auto 5% auto;
+  padding: 0 12px 0 12px;
+  color: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.user-form a:active, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.user-form p {
+  margin: 5% auto 5% auto;
+  padding: 0 12px 0 12px;
+  color: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+.user-form button {
+  width: 100%;
+  padding: 0 12px 0 12px;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  margin: 3% auto 3% auto;
+}
+
+.button-light-blue {
+  background: #07a66e;
+}
+
+.button-facebook {
+  background: #fbaf17;
+}
+
+.button-facebook i {
+  float: left;
+  font-size: 1.5em;
+}
+
+.side-menu-header {
+  height: 100px;
+  background: url(../img/bg.jpg) no-repeat center;
+  background-size: cover;
+  border: none;
+}
+
+.side-menu-header img{
+  width: 100%;
+}
+
+.side-menu-item {
+
+}
+
+.img-icon-left {
+  margin: auto;
+  position: fixed;
+  height: 26px;
+}
+.side-menu-item span{
+  margin: auto 0 auto 20%;
+  font-size: 12px;
+}
+
+.bar-emaitr-purple {
+  background-color: #2e4e7c;
+  border: none;
+  color: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+}
+
+.bar-emaitr-orange {
+  background-color: #e26900;
+  border: none;
+  color: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+}
+
+.bar-emaitr-purple h1
+{
+  color: white;
+}
+
+.bg-emaitr-gray {
+  background-color: #6e645a;
+}
+
+#emaitr-gray ion-item{
+  margin: 0 4% 0 4%;
+  border: none;
+  border-bottom: #564d45 solid 2px;
+
+}
+
+
+#emaitr-gray ion-item>a {
+  background-color: #6e645a;
+  color: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+}
+
+
+.home-slider-image {
+  max-height: 30%;
+  width: 100%;
+}
+
+
+.category-card-container {
+  padding: 3%;
+
+}
+
+.category-card {
+  padding: 5% 10% 5% 10%;
+  background: transparent;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  box-shadow: 1px 1px rgba(165, 166, 167, 0.12), 0 1px #a5a6a7;
+
+}
+
+.category-card p {
+  color: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 0.8em;
+}
+
+.marquee {
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 5s linear infinite;
+}
+
+
+@keyframes marquee {
+  0%   { text-indent: 15% }
+  100% { text-indent: -120% }
+}
+
+.subheading-orange {
+  color: #e26900;
+  text-align: center;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  font-size: 1.5em;
+}
+
+.categories-list {
+  padding-right: 20px;
+}
+
+.categories-list i{
+  float: right;
+  padding-right: 0;
+  color: #e26900;
+}
+
+#no-results {
+  padding: 10px;
+  margin: 10px;
+}
+
+#no-results span {
+  text-align: center;
+}
+
+.listing img {
+  width: 100%;
+}
+
+#img-nav-left {
+  float: left;
+  color: #dedede;
+  padding: 5%;
+  margin-top: 100px;
+}
+
+#img-nav-right {
+  float: right;
+  color: #dedede;
+  padding: 5%;
+  margin-top: 100px;
+}
+
+.social-pane {
+  padding: 0;
+}
+.social-pane div {
+  text-align: center;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+}
+.social-pane div>i {
+  font-size: 3.5em;
+}
+
+.footer-listing {
+  padding: 0;
+  margin-bottom: 0;
+  height: 50px
+  border: none;
+}
+
+ion-nav-title h3 {
+  background-color: #e57414;
+  color: white;
+}
+
+#banner {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#call-now {
+  background-color: #e57414;
+  color: white;
+  width: 100%;
+  margin: 0;
+  padding-top: 5px;
+  text-align: center;
+}
+
+#call-now i {
+  position: fixed;
+  font-size: 2.5em;
+  font-weight: bolder;
+  margin-left: -28px;
+}
+
+#call-now span {
+  font-size: 1.5em;
+}
+
+#edit {
+  position: absolute;
+  z-index: 100000;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  font-size: 2em;
+}
+
+.footer-listing a>i {
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.footer-listing a>span {
+    font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+#recommendation-count {
+  text-align: center;
+  font-size: 3em;
+}
+
+.business-info {
+  padding: 0;
+}
+
+.business-info div {
+  border: solid 1px #e5e5e5;
+  border-collapse: collapse;
+  background: #e57414;
+  font-size: 1em;
+  padding: auto;
+  color: white;
+  text-align: center;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+}
+.business-description p {
+  padding: 10px;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+}
+
+.business-contact div {
+  margin: auto;
+}
+
+
+#map_canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.angular-google-map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+
+.business-form {
+  padding: 5%;
+  background: #f4f4f4;
+}
+
+.business-form label {
+  width: 100%;
+  margin: 3% auto 3% auto;
+  background-color: rgba(255, 255, 255, 1 );
+  height:50px;
+  color: black;
+  padding: 0 12px 0 12px;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+.business-form input {
+  width: 100%;
+  margin: 3% auto 3% auto;
+  background-color: rgba(255, 255, 255, 1 );
+  height:50px;
+  color: black;
+  padding: 0 12px 0 12px;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+.business-form button {
+  width: 60%;
+  padding: 0 12px 0 12px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  display: block;
+  margin: 5% auto 3% auto;
+}
+
+.button-orange {
+  background: #fa8203;
+}
+
+ion-item > a:visited {
+  color: #564d45;
+}
+
+
+#search-bar {
+  background-color: #2e4e7c;
+  padding: 5px;
+  border: none;
+
+}
+
+#search-container{
+  background: #e26900;
+  padding: 0;
+  border: 2px solid white;
+}
+
+#search-box {
+  border: none;
+  background: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+}
+
+#search-container i {
+  color: white;
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  text-align: right;
+  margin: auto 0 auto 0;
+  padding: auto 0 auto 0;
+}
+
+#location-switch {
+  font-family: "MyriadPro", Roboto, Arial, Helvetica, sans-serif;
+  border: none;
+  background: #e26900;
+  color: white;
+  font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+#location-select {
+  width: 100%;
+  padding:3px;
+  margin: 0;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  -webkit-box-shadow: 0 3px 0 #efefef, 0 -1px #fff inset;
+  -moz-box-shadow: 0 3px 0 #efefef, 0 -1px #fff inset;
+  box-shadow: 0 3px 0 #efefef, 0 -1px #fff inset;
+  background: #f8f8f8;
+  color:#888;
+  border:none;
+  outline:none;
+  display: inline-block;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  cursor:pointer;
+}
+
+#search-results {
+  display: block;
+}
+
+#search-results ion-list{
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+#search-results ion-item {
+  margin: 0;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+/*SUBMIT BUSINESS*/
+
+
+
+#business-timings {
+  background: white;
+  border: 1px solid gray;
+  padding: 0;
+}
+
+#business-timings label>div {
+  border: none;
+}
+
+#business-hours {
+  width: 100%;
+}
+
+#business-hours li{
+  display: inline-block;
+  margin: auto;
+}
+
+#attachment {
+  width: 100%;
+  margin: 20px auto 0 auto;
+}
+
+
+.img-upload {
+  padding:0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.business-img-upload {
+  z-index: 1;
+  background: url(../img/add_file.png) no-repeat 22px 22px;
+  border: 1px solid #5890ff;
+  border-radius: 2px;
+  font-size: 1000px;
+  height: 65px;
+  margin: 0 7px 0 0;
+  overflow: hidden;
+  width: 65px;
+  position: relative;
+  text-align: right;
+}
+
+.thumb {
+  height: 75px;
+  border: 1px solid #000;
+  margin: 10px 5px 0 0;
+}
+
+.file-upload {
+  -moz-opacity:0 ;
+  filter:alpha(opacity: 0);
+  opacity: 0;
+  z-index: 2;
+}
+
+

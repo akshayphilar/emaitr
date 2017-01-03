@@ -1,0 +1,73 @@
+<ion-view view-title="Submit Your Business !!">
+  <ion-content>
+    <form class="business-form">
+      <input type="text" placeholder="Business Title" ng-model="business.title">
+      <input type="text" placeholder="Business Description" ng-model="business.description">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Category
+        </div>
+        <select ng-model="business.category" ng-change="loadSubCategories()">
+          <option ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Sub-Category
+        </div>
+        <select ng-model="business.subCategory">
+          <option ng-repeat="subCategory in subCategories" value="{{subCategory.id}}">{{subCategory.name}}</option>
+        </select>
+      </label>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Location
+          </div>
+          <select ng-model="business.location">
+            <option ng-repeat="location in locations" value="{{location.id}}">{{location.name}}</option>
+          </select>
+        </label>
+      <input type="text" class="form-control" placeholder="Address"
+             g-places-autocomplete ng-model="business.address" ng-change="getCoordinates()">
+      <input type="text" placeholder="Business Contact Number" ng-model="business.contactNumber">
+      <input type="text" placeholder="WhatsApp Number" ng-model="business.whatsAppNumber">
+      <input type="text" placeholder="Referral Code" ng-model="business.referralCode">
+      <!--input type="text" placeholder="Keywords" ng-model="business.keywords"-->
+      <div id="business-timings">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Opens at
+          </div>
+          <select ng-model="businessHours.opening">
+            <option ng-repeat="time in timings" value="{{time}}">{{time}}</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Closes at
+          </div>
+          <select ng-model="businessHours.closing">
+            <option ng-repeat="time in timings" value="{{time}}">{{time}}</option>
+          </select>
+        </label>
+        <ul id="business-hours" class="row">
+          <li class="col col-10" ng-repeat="businessDay in businessDays">
+            <input type="checkbox" ng-model="businessDays[$index].status" ng-change="checkHours($index)">
+            {{businessDay.day}}
+          </li>
+        </ul>
+      </div>
+      <!--img data-ng-src="{{imageURI}}" id="attachment"-->
+      <div class="img-upload">
+        <div class="business-img-upload">
+          <input type="file" onchange="angular.element(this).scope().onFileSet(this.files)"
+                 accept="image/*" name="file1" class="file-upload"/>
+        </div>
+        <div id="thumbnails"></div>
+        <button class="button button-small button-stable" ng-click="resetFields()">RESET</button>
+      </div>
+      <button class="button-orange" ng-click="submitBusiness()">SUBMIT BUSINESS</button>
+      </form>
+  </ion-content>
+</ion-view>

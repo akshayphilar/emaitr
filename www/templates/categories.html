@@ -1,0 +1,12 @@
+<ion-view view-title="eMaitr - Your Search Buddy !!">
+  <ion-content>
+    <h3 class="subheading-orange">{{categoryName}}</h3>
+    <ion-list>
+      <ion-item ng-repeat="subCategory in subCategories" class="item-icon-right categories-list"
+                ng-href="#/app/listings/{{subCategory.id}}">
+        <span>{{subCategory.name}}</span>
+        <i class="icon-right ion-chevron-right"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view view-title="eMaitr - Your Search Buddy !!">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="listing in listings" class="item-avatar-left" ng-href="#/app/listing/{{listing.id}}">
+        <img class="icon-left" ng-src={{listing.image}}>
+        <h2>{{listing.title}}</h2>
+        <p>{{listing.address.address}}</p>
+      </ion-item>
+    </ion-list>
+    <h3 ng-show="noResultsFlag" id="no-results"><i class="ion-search"> </i><span>{{message}}</span></h3>
+  </ion-content>
+</ion-view>

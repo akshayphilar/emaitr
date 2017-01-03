@@ -1,0 +1,41 @@
+<ion-view view-title="eMaitr - Your Search Buddy !!">
+  <ion-content>
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img ng-src="./img/profile.jpg">
+        <h2>{{user.displayname}}</h2>
+        <p>Registered since {{user.registered}}</p>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-android-contact"></i>
+        <input type="text" ng-model="userDetails.fullName">
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-ios-telephone"></i>
+        {{user.username}}
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-ios-email"></i>
+        <input type="text" placeholder="{{user.email}}" ng-model="userDetails.email">
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-ios-home"></i>
+        <input type="text" ng-model="userDetails.address">
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-edit"></i>
+        <input type="password" placeholder="Reset Password" ng-model="userDetails.password">
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon"></i>
+        <input type="password" placeholder="Repeat Reset Password" ng-model="userDetails.repeatPassword">
+      </div>
+    </div>
+    <div class="row">
+      <button class="col col-34 button button-balanced col-offset-33" ng-click="updateProfile()">Update</button>
+    </div>
+
+  </ion-content>
+</ion-view>

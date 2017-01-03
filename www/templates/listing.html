@@ -1,0 +1,78 @@
+<ion-view view-title="eMaitr - Your Search Buddy !!">
+  <ion-content>
+    <ion-header-bar align-title="left" class="bar-positive" ng-show="isOwnListing">
+      <h1 class="title">Edit Listing</h1>
+      <div class="buttons">
+        <button class="button" ng-click="editListing()"><i class="ion-edit"></i></button>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+      <div class="listing">
+        <div class="row social-pane">
+          <div class="col col-25 item-icon-left" ng-click="recommend(listing.id)">
+            <i class="ion-thumbsup energized icon-left"></i><br/>Recommend
+          </div>
+          <div class="col col-25 item-icon-left" ng-controller="ShareCtrl" ng-click="shareListing(listing)">
+            <i class="ion-android-share balanced icon-left"></i><br/>Share</div>
+          <div class="col col-25 item-icon-left" ng-click="loadMap(listing.address.coordinates)">
+            <i class="ion-map royal icon-left"></i><br/>Map</div>
+          <div class="col col-25 item-icon-left" ng-controller="UserFavouritesCtrl" ng-click="addToFavourites(listing)">
+            <i class="ion-heart assertive icon-left"></i><br/>Favourite</div>
+        </div>
+        <div id="banner" ng-style="{'background-image':'url('+currentImage+')'}">
+
+          <i class="ion-chevron-left" id="img-nav-left" ng-click="prevImage()"></i>
+          <i class="ion-chevron-right" id="img-nav-right" ng-click="nextImage()"></i>
+
+        </div>
+        <div class="row business-name">
+          <div class="col col-50">
+            <h4>{{listing.title}}</h4>
+            <p>{{listing.types[0].title}}</p>
+          </div>
+          <div class="col col-50">
+            <h3 id="recommendation-count">{{recommendations}} <i class="ion-thumbsup"></i></h3>
+          </div>
+        </div>
+        <div class="row business-info">
+          <div class="col col-33 button button-small" ng-click="tabSwitch('description')">Business Description</div>
+          <div class="col col-33 button button-small" ng-click="tabSwitch('offers')">Special Offers</div>
+          <div class="col col-33 button button-small" ng-click="tabSwitch('businessHours')">Business Time</div>
+        </div>
+        <div class="business-description" ng-show="tabs.description">
+          <p>{{listing.description}}</p>
+        </div>
+        <div class="business-description" ng-show="tabs.offers">
+          <p>{{customFields.offers}}</p>
+        </div>
+        <div class="business-description" ng-show="tabs.businessHours">
+          <div class="list">
+            <div class="item row" ng-repeat="businessHour in businessHours">
+              <span class="col col-50">{{businessHour.day}}</span>
+              <span class="col col-50">{{businessHour.timings}}</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="business-contact row">
+          <div>
+            <button class="button button-small button-assertive" ng-controller="ShareCtrl" ng-click="sendMessage(listing)">
+              Contact Details
+            </button>
+            <p>
+              {{listing.address.address}}
+            </p>
+            <p ng-repeat="attribute in listing.attributes">
+              {{attribute.title}} : {{attribute.value}}
+            </p>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ion-content>
+  <ion-footer-bar class="footer-listing">
+    <a class="button button-block" id="call-now" href="tel:{{customFields.businessContactNum}}"><i class="ion-android-call balanced icon-left"> </i><span>Call Now</span></a>
+  </ion-footer-bar>
+</ion-view>

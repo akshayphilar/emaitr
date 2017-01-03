@@ -1,0 +1,64 @@
+<ion-view view-title="eMaitr - Your Search Buddy !!">
+  <ion-content scroll="false">
+    <div ng-controller="SearchCtrl" id="search-bar">
+      <div class="row" id="search-container">
+        <input ng-model="search.keyword" class="col col-55" id="search-box" placeholder="Search Local Business.."
+               ng-change="getListings(0)">
+        <!--button class="col col-25" id="location-switch" ng-click="selectLocation($event)">
+          <div><i class="ion-android-pin"> </i>{{defaultLocation.name}}</div>
+        </button-->
+          <i class="ion-android-pin col col-10"></i>
+          <select name="mySelect" class="col col-25" id="location-switch" ng-change="getListings(1)"
+                  ng-options="location.name for location in locations track by location.id"
+                  ng-model="search.location">
+          </select>
+        <!--select ng-model="search.location" class="col col-25" id="location-select" ng-change="getListings(1)">
+          <option selected ng-repeat="location in locations" value="{{location.id}}">{{location.name}}</option>
+        </select-->
+      </div>
+      <div class="row" id="search-results">
+        <ion-list class="row">
+          <ion-item ng-repeat="listing in results | filter:search.keyword"
+            ng-click="getListing(listing)" class="item col col-100">
+            <h2>{{listing.title}}</h2>
+          </ion-item>
+        </ion-list>
+
+      </div>
+    </div>
+
+  <ion-content class="emaitr_bg">
+    <ion-slide-box class="no-margin-slidebox" slide-interval="3000" auto-play="true" does-continue="true">
+      <ion-slide>
+        <img class="home-slider-image" ng-src="./img/banner-1.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img class="home-slider-image" ng-src="./img/banner-2.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img class="home-slider-image" ng-src="./img/banner-3.jpg">
+      </ion-slide>
+    </ion-slide-box>
+    <div class="row responsive" ng-repeat="category in directory">
+      <div class="col col-33 category-card-container">
+        <div class="item item-image category-card" ng-click="displaySubCategories(category[0].id)">
+          <img ng-src="{{category[0].iconimage}}">
+          <p ng-class="category[0].name.search(' ') > 0 ? 'marquee': '' ">{{category[0].name | formatString}}</p>
+        </div>
+      </div>
+      <div class="col col-33 category-card-container">
+          <div class="item item-image category-card" ng-click="displaySubCategories(category[1].id)">
+            <img ng-src="{{category[1].iconimage}}">
+            <p ng-class="category[1].name.search(' ') > 0 ? 'marquee': '' ">{{category[1].name | formatString}}</p>
+          </div>
+      </div>
+      <div class="col col-33 category-card-container">
+        <div class="item item-image category-card" ng-click="displaySubCategories(category[2].id)">
+          <img ng-src="{{category[2].iconimage}}">
+          <p ng-class="category[2].name.search(' ') > 0 ? 'marquee': '' ">{{category[2].name | formatString}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  </ion-content>
+</ion-view>

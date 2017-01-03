@@ -1,0 +1,13 @@
+<ion-view view-title="eMaitr - Your Search Buddy !!">
+  <ion-content class="emaitr_bg_plain">
+    <img ng-src="./img/logo.png" class="user-header-img">
+    <form class="user-form">
+      <input type="text" placeholder="Mobile Number" ng-model="credentials.username">
+      <input type="password" placeholder="Password" ng-model="credentials.password">
+      <a ng-href="#/user/reset">Forgot Password?</a>
+      <button class="button-light-blue" ng-click="login()">LOGIN</button>
+      <button class="button-facebook" ng-click="goToRegister()">REGISTER</button>
+      <!--a ng-href="#/user/register">Register</a-->
+    </form>
+  </ion-content>
+</ion-view>

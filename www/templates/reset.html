@@ -1,0 +1,12 @@
+<ion-view view-title="eMaitr - Your Search Buddy !!">
+  <ion-content class="emaitr_bg_plain">
+    <img ng-src="./img/logo.png" class="user-header-img">
+    <form class="user-form">
+      <input type="text" placeholder="Mobile Number" ng-model="credentials.username">
+      <!--input type="text" placeholder="Email Address" ng-model="credentials.email"-->
+      <p><i class="ion-ios-locked-outline"> </i>You will receive a new password on your Mobile Phone</p>
+      <button class="button-facebook" ng-click="resetPassword()">Reset</button>
+      <a ng-href="#/user/login"><i class="ion-android-arrow-back"> </i> Return to Login</a>
+    </form>
+  </ion-content>
+</ion-view>
